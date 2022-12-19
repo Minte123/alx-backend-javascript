@@ -1,5 +1,11 @@
 export default function createIteratorObject(report) {
-  while (report) {
-    console.log('Placeholder');
-  }
+  return {
+    * [Symbol.iterator]() {
+      for (const department of Object.values(report.allEmployees)) {
+        for (const employee of department) {
+          yield employee;
+        }
+      }
+    },
+  };
 }
