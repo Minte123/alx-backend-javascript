@@ -1,11 +1,12 @@
-/*
-* @author Mintesnot Mekonen
-*/
-
+/**
+ * Contains the miscellaneous route handlers.
+ * @author Bezaleel Olakunori <https://github.com/B3zaleel>
+ */
 class AppController {
   static getHomepage(request, response) {
-    response.send(200, 'Hello Holberton School!');
+    response.status(200).send('Hello Holberton School!');
   }
 }
 
 export default AppController;
+module.exports = AppController;
